@@ -1,0 +1,76 @@
+What is SCM(Source Code Management)/VCS(Version Control System)?
+A source code manager (SCM) is a software tool used by teams of programmers to manage source code.
+
+SCMs are used to track revisions in software. Each revision is given a timestamp and includes the name of the person who is responsible for the change. Various revisions may be compared, stored, and merged with other revisions.
+
+Using revision control software, a programmer or team of programmers may use several approaches for software development. Locally, developers must all use the same computer system, which may be the revision control system. In a distributed model, developers work directly with a local repository, where their individual source code revisions are collected. The developers then update the central repository with their local revisions so that revisions can be shared among developers.
+
+VCS are two types
+-Centralized VCS
+-Distributed VCS
+
+Centralized VCS are two layered architecture
+Central Repository and Working Copy
+Ex: SVN, VSS, BitBucket, Rational Rose, TFS..
+
+Distributed VCS are three layered architecture
+Central Repository, Staging Copy and Working Copy
+Ex: Git
+
+What is a Repository?
+A repository (usually abbreviated to “repo”) is a location where all the files for a particular project are stored. Each project has its own repo, and you can access it with a unique URL.
+
+What is GitHub?
+Git is a version control system, similar but better than the many alternatives available. So, what makes GitHub so special? Git is a command-line tool, but the center around which all things involving Git revolve is the hub—GitHub.com—where developers store their projects and network with like minded people.
+- branch
+- pullrequest
+- revert
+- fork
+- cherry-pick
+
+Benefits using Git?
+Simple
+Speed
+Strong Branch Merge Support
+Distributed
+Scale Well for large Projects
+Git supports all the major IDE's(Integrated Development Environments- NetBeans, Ecllipse, Visual Studio, VSCode) and integrate it easily
+Git supports all OS(Operating Systems - Linux, Windows, Mac..)
+
+What is git CLI(command line tool)?
+Git bash is the git CLI, here we can use the git with the help of commands. 
+
+Commands:
+git clone <REPOSITORY_URL> 
+git add . (OR) git add <FILE_NAME> 
+git commit -m "<COMMIT_MESSAGE>" 
+git status 
+git push 
+git pull 
+git branch -a
+
+System Configuration
+git config --system
+git config --global
+git config 
+git config --global user.email <EMAIL_ADDRESS>
+git config --global user.name <USER_NAME>
+git config --global --edit
+
+What is Branching Strategies?
+Branching Strategies help you to keep the code clean and safe. The most popular branching strategies are master-dev-feature, master-qa-dev-feature, master-qa-hotfix-dev-feature.
+
+What is Pull request?
+The pull request is the collaborative process that lets the rest of the team discuss changes in a branch and agree to merge them once everyone approves. Use pull requests to get early feedback from others on work in progress, even if you're not ready to merge the changes into another branch.
+
+Revert?
+A team member made a pull request using git for visual studio online. It was approved and merged in successfully, however we would like to undo that and revert to the state of the branch prior to the PR
+
+Fork?
+is a option to start your work with base of another repository.
+
+Cherry-pick?
+Cherry picking in Git means to choose a commit from one branch and apply it onto another. This is in contrast with other ways such as merge and rebase which normally apply many commits onto another branch
+
+Branch Policies?
+It helps to protect the branch and add the default reviewers and any other set of permissions.
