@@ -1,0 +1,27 @@
+Install and Setup the Docker client in your workstation
+
+First search the available jenkins containers in docker hub
+  docker search jenkins
+ 
+Choose the container and pull it from the Docker hub
+  docker pull jenkins
+
+After pull please verify whether the images exists in your workstation
+  docker images
+
+Next, run a container using this image and map data directory from the container to the host; e.g in the example below /var/jenkins_home from the container is mapped to jenkins/ directory from the current path on the host. Jenkins 8080 port is also exposed to the host as 49001.
+  docker run -d -p 49001:8080 -v $PWD/jenkins:/var/jenkins_home:z -t jenkins/jenkins
+
+Now check the container is running or not
+  docker ps
+  
+If it is running means go to the browser and hit the below url
+  localhost:8080
+
+Entering in to the docker container with bash
+>docker exec -it jenkins bash
+>cat /var/lib/jenkins/secrets/initialAdminPassword
+copy the code and paste in the unlock page in your browser
+>exit 
+
+Install the recommended Plugins  
