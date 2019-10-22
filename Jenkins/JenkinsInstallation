@@ -1,0 +1,74 @@
+Install Jenkins on Ubuntu
+-------------------------
+sudo apt-get update
+sudo apt-cache search openjdk
+sudo apt-get install openjdk-8-jdk(Select any suitable package from the top. This documentation selects the openjdk-8-jdk)
+
+Prepare your system for Jenkins in ubuntu
+-----------------------------------------
+wget -q -O - https://pkg.jenkins.io/debian/jenkins-ci.org.key | sudo apt-key add -
+echo deb https://pkg.jenkins.io/debian-stable binary/ | sudo tee /etc/apt/sources.list.d/jenkins.list
+sudo apt-get update
+
+Before executing install of Jenkins lets try to find the possible Jenkins versions available
+sudo apt-cache madison jenkins
+
+Installing Jenkins
+------------------
+sudo apt-get install jenkins  -y
+
+Jenkins Post-Install Configuration
+----------------------------------
+-Navigate to the url http://<jenkinsserverip>:8080
+-Find the contents of /var/jenkins_home/secrets/initialAdminPassword and enter in the Administrator Password Textbox and click on continue
+-Now Select the Install Selected plugins in the Customize Jenkins Page
+-Wait till all the plugin installations become successful and then you will be navigated to Create First Admin User Page. Enter the details and click on save and continue
+-After confirming the instance configuration, You should see the Jenkins is ready page
+-Click on Start using Jenkins Page and you will be redirected to Jenkins home page.
+
+Install Jenkins on Windows
+--------------------------
+Since Jenkins runs on Java, you need either latest version of Java Development Kit (JDK) or Java Runtime Environment (JRE).
+
+Step 1) Got to https://jenkins.io/download/ and select the platform. In our case Windows
+Step 2) Go to download location from local computer and unzip the downloaded package. Double-click on unzipped jenkins.msi. You can also Jenkin using a WAR (Web application ARchive) but that is not recommended.
+Step 3) In the Jenkin Setup screen, click Next.
+Step 4) Choose the location where you want to have the Jenkins instance installed (default location is C:\Program Files (x86)\Jenkins), then click on Next button.
+Step 5)Click on the Install button.
+Step 6) Once install is complete, click Finish.
+Step 7) During the installation process an info panel may pop-up to inform the user that for a complete setup, the system should be rebooted at the end of the current installation. Click on OK button when the Info panel is popping-up:
+
+How to Unblock Jenkins?
+After completing the Jenkins installation phase, you should proceed further and start its configuration. Next steps will guide you how you can unblock Jenkins application:
+
+Step 1) After completing the Jenkins installation process, a browser tab will pop-up asking for the initial Administrator password. To access Jenkins, you need to go to browse the following path in your web browser.
+
+http://localhost:8080
+
+If you can access the above URL, then it confirms that Jenkins is successfully installed in your system.
+
+Step 2) The initial Administrator password should be found under the Jenkins installation path (set at Step 4 in Jenkins Installation).
+
+For default installation location to C:\Program Files (x86)\Jenkins, a file called initialAdminPassword can be found under C:\Program Files (x86)\Jenkins\secrets.
+
+However, If a custom path for Jenkins installation was selected, then you should check that location for initialAdminPassword file.
+
+Step 3) Open the highlighted file and copy the content of the initialAdminPassword file.
+
+Step 4) Paste the password it into browser's pop-up tab (http://localhost:8080/login?form=%2F) and click on Continue button.
+
+Customize Jenkins
+You can also customize your Jenkins environment by below-given steps:
+
+Step 1) Click on the "Install suggested plugins button" so Jenkins will retrieve and install the essential plugins
+
+Jenkins will start to download and install all the necessary plugins needed to create new Jenkins Jobs.
+Note: You can choose the Option "Select Plugins to Install" and select the plugins you want to install
+
+Step 2) After all suggested plugins were installed, the "Create First Admin User" panel will show up. Fill all the fields with desired account details and hit the "Save and Finish" button.
+
+Step 3) Once you have filled the above data, finally it will ask for URL information where you can configure the default instance path for Jenkins. Leave it as it is to avoid any confusions later. However, if another application is already using 8080 port, you can use another port for Jenkins and finally save the settings, and you are done with installation of Jenkins. Hit the "Save and Continue" button:
+
+Congratulations! We have successfully installed a new Jenkins Server. Hit the "Start using Jenkins" button.
+
+
