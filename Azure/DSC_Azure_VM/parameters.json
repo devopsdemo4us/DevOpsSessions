@@ -1,0 +1,51 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "location": {
+            "value": "japaneast"
+        },
+        "networkInterfaceName": {
+            "value": "testiis301"
+        },
+        "subnetName": {
+            "value": "Subnet"
+        },
+        "virtualNetworkId": {
+            "value": "/subscriptions/3c36b5de-0279-4f80-bf2d-04a2ae606642/resourceGroups/devopsdemo4us/providers/Microsoft.Network/virtualNetworks/MyVNET"
+        },
+        "publicIpAddressName": {
+            "value": "TestIIS-ip"
+        },
+        "publicIpAddressType": {
+            "value": "Dynamic"
+        },
+        "publicIpAddressSku": {
+            "value": "Basic"
+        },
+        "virtualMachineName": {
+            "value": "TestIIS"
+        },
+        "virtualMachineRG": {
+            "value": "devopsdemo4us"
+        },
+        "osDiskType": {
+            "value": "Premium_LRS"
+        },
+        "virtualMachineSize": {
+            "value": "Standard_DS1_v2"
+        },
+        "adminUsername": {
+            "value": "windowsadmin"
+        },
+        "adminPassword": {
+            "value": null
+        },
+        "diagnosticsStorageAccountName": {
+            "value": "rbx2mqzexlbacsawinvm"
+        },
+        "diagnosticsStorageAccountId": {
+            "value": "/subscriptions/3c36b5de-0279-4f80-bf2d-04a2ae606642/resourceGroups/devopsdemo4us/providers/Microsoft.Storage/storageAccounts/rbx2mqzexlbacsawinvm"
+        }
+    }
+}
